@@ -1,0 +1,331 @@
+﻿<Window x:Class="TestCarel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestCarel"
+        mc:Ignorable="d"
+        Title="Панель входов/выходов UNIVERSAL" MinHeight="500" MinWidth="700" Height="500" Width="700">
+    <Grid Background="#BDBDBD">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="73*"></ColumnDefinition>
+            <ColumnDefinition Width="73*"></ColumnDefinition>
+            <ColumnDefinition Width="100*"></ColumnDefinition>
+            <ColumnDefinition Width="100*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Grid.Column="3">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition ></ColumnDefinition>
+                <ColumnDefinition ></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btn_CheckConnection" Grid.Column="1" Grid.Row="0" Background="AliceBlue" BorderBrush="Black" Click="Connection_Click" AutomationProperties.HelpText="Приверит, есть ли контроллер по данному IP адресу в сети" Content="Соединить" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" MaxWidth="100" MaxHeight="30" />
+            <TextBox x:Name="txt_IP_address" Grid.Column="0" Grid.Row="0"  HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" HorizontalAlignment="Stretch" Text="192.168.1.152"  MaxHeight="30" MaxWidth="100"/>
+        </Grid>
+        <Grid x:Name="Grid_U" Grid.Column="0" Grid.Row="1"  Visibility="Visible" ShowGridLines="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25*"></ColumnDefinition>
+                <ColumnDefinition Width="48*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Content="U1: " Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Padding="0"/>
+            <Label Content="U2: " Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Padding="0"/>
+            <Label Content="U3: " Grid.Row="5" Grid.Column="0" HorizontalAlignment="Right"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Padding="0"/>
+            <Label Content="U4: " Grid.Row="7" Grid.Column="0" HorizontalAlignment="Right"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Padding="0"/>
+            <Label Content="U5: " Grid.Row="9" Grid.Column="0" HorizontalAlignment="Right"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Padding="0"/>
+            <Label Content="U6: " Grid.Row="11" Grid.Column="0" HorizontalAlignment="Right"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Padding="0"/>
+            <Label Content="U7: " Grid.Row="13" Grid.Column="0" HorizontalAlignment="Right"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Padding="0"/>
+            <Label Content="U8: " Grid.Row="15" Grid.Column="0" HorizontalAlignment="Right"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Padding="0"/>
+            <Label Content="U9: " Grid.Row="17" Grid.Column="0" HorizontalAlignment="Right"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Padding="0"/>
+            <Label Content="U10: " Grid.Row="19" Grid.Column="0" HorizontalAlignment="Right"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Padding="0"/>
+            <Label x:Name="descr_U1" Content="" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Foreground="Blue" Padding="0"/>
+            <Label x:Name="descr_U2" Content="" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Foreground="Blue" Padding="0"/>
+            <Label x:Name="descr_U3" Content="" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Foreground="Blue" Padding="0"/>
+            <Label x:Name="descr_U4" Content="" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Foreground="Blue" Padding="0"/>
+            <Label x:Name="descr_U5" Content="" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Foreground="Blue" Padding="0"/>
+            <Label x:Name="descr_U6" Content="" Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Foreground="Blue" Padding="0"/>
+            <Label x:Name="descr_U7" Content="" Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Foreground="Blue" Padding="0"/>
+            <Label x:Name="descr_U8" Content="" Grid.Row="14" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Foreground="Blue" Padding="0"/>
+            <Label x:Name="descr_U9" Content="" Grid.Row="16" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Foreground="Blue" Padding="0"/>
+            <Label x:Name="descr_U10" Content="" Grid.Row="18" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Foreground="Blue" Padding="0"/>
+            <Label x:Name="label_U1" Content="---" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Padding="10, 0" Foreground="Green"/>
+            <Label x:Name="label_U2" Content="---" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Padding="10, 0" Foreground="Green"/>
+            <Label x:Name="label_U3" Content="---" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Padding="10, 0" Foreground="Green"/>
+            <Label x:Name="label_U4" Content="---" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Padding="10, 0" Foreground="Green"/>
+            <Label x:Name="label_U5" Content="---" Grid.Row="9" Grid.Column="1" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Padding="10, 0" Foreground="Green"/>
+            <Label x:Name="label_U6" Content="---" Grid.Row="11" Grid.Column="1" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Padding="10, 0" Foreground="Green"/>
+            <Label x:Name="label_U7" Content="---" Grid.Row="13" Grid.Column="1" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Padding="10, 0" Foreground="Green"/>
+            <Label x:Name="label_U8" Content="---" Grid.Row="15" Grid.Column="1" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Padding="10, 0" Foreground="Green"/>
+            <Label x:Name="label_U9" Content="---" Grid.Row="17" Grid.Column="1" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Padding="10, 0" Foreground="Green"/>
+            <Label x:Name="label_U10" Content="---" Grid.Row="19" Grid.Column="1" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Padding="10, 0" Foreground="Green"/>
+        </Grid>
+        <Grid x:Name="Grid_Y" Grid.Column="1" Grid.Row="1" Visibility="Visible" ShowGridLines="False" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25*"></ColumnDefinition>
+                <ColumnDefinition Width="48*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Content="Y1: " Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Padding="0"/>
+            <Label Content="Y2: " Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Padding="0"/>
+            <Label Content="Y3: " Grid.Row="5" Grid.Column="0" HorizontalAlignment="Right"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Padding="0"/>
+            <Label Content="Y4: " Grid.Row="7" Grid.Column="0" HorizontalAlignment="Right"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Padding="0"/>
+            <Label Content="Y5: " Grid.Row="9" Grid.Column="0" HorizontalAlignment="Right"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Padding="0"/>
+            <Label Content="Y6: " Grid.Row="11" Grid.Column="0" HorizontalAlignment="Right"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Padding="0"/>
+            <Label x:Name="descr_Y1" Content="" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontSize="12" Foreground="Blue" Padding="10,0"/>
+            <Label x:Name="descr_Y2" Content="" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Foreground="Blue" Padding="10,0" />
+            <Label x:Name="descr_Y3" Content="" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Foreground="Blue" Padding="10,0" />
+            <Label x:Name="descr_Y4" Content="" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Foreground="Blue" Padding="10,0" />
+            <Label x:Name="descr_Y5" Content="" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Foreground="Blue" Padding="10,0" />
+            <Label x:Name="descr_Y6" Content="" Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Foreground="Blue" Padding="10,0" />
+            <Label x:Name="label_Y1" Content="---" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Foreground="Firebrick" Padding="10,0"/>
+            <Label x:Name="label_Y2" Content="---" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Foreground="Firebrick" Padding="10,0" />
+            <Label x:Name="label_Y3" Content="---" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Foreground="Firebrick" Padding="10,0" />
+            <Label x:Name="label_Y4" Content="---" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Foreground="Firebrick" Padding="10,0" />
+            <Label x:Name="label_Y5" Content="---" Grid.Row="9" Grid.Column="1" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Foreground="Firebrick" Padding="10,0" />
+            <Label x:Name="label_Y6" Content="---" Grid.Row="11" Grid.Column="1" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Foreground="Firebrick" Padding="10,0" />
+        </Grid>
+        <Grid x:Name="Grid_DI"  Grid.Column="2" Grid.Row="1" Visibility="Visible" ShowGridLines="False" Margin="10,0,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Ellipse x:Name="lamp_DI1" Grid.Column="1" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="1"/>
+            <Ellipse x:Name="lamp_DI2" Grid.Column="1" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="3"/>
+            <Ellipse x:Name="lamp_DI3" Grid.Column="1" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="5"/>
+            <Ellipse x:Name="lamp_DI4" Grid.Column="1" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="7"/>
+            <Ellipse x:Name="lamp_DI5" Grid.Column="1" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="9"/>
+            <Ellipse x:Name="lamp_DI6" Grid.Column="1" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="11"/>
+            <Ellipse x:Name="lamp_DI7" Grid.Column="1" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="13"/>
+            <Ellipse x:Name="lamp_DI8" Grid.Column="1" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="15"/>
+            <Ellipse x:Name="lamp_DI9" Grid.Column="1" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="17"/>
+            <Ellipse x:Name="lamp_DI10" Grid.Column="3" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="1"/>
+            <Ellipse x:Name="lamp_DI11" Grid.Column="3" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="3"/>
+            <Ellipse x:Name="lamp_DI12" Grid.Column="3" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="5"/>
+            <Ellipse x:Name="lamp_DI13" Grid.Column="3" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="7"/>
+            <Ellipse x:Name="lamp_DI14" Grid.Column="3" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="9"/>
+            <Ellipse x:Name="lamp_DI15" Grid.Column="3" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="11"/>
+            <Ellipse x:Name="lamp_DI16" Grid.Column="3" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="13"/>
+            <Ellipse x:Name="lamp_DI17" Grid.Column="3" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="15"/>
+            <Ellipse x:Name="lamp_DI18" Grid.Column="3" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="17"/>
+            <Label x:Name="descr_DI1" Content="" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DI2" Content="" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DI3" Content="" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DI4" Content="" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="6" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DI5" Content="" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="8" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DI6" Content="" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="10" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DI7" Content="" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="12" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DI8" Content="" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="14" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DI9" Content="" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="16" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DI10" Content="" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="0" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DI11" Content="" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="2" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DI12" Content="" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="4" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DI13" Content="" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="6" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DI14" Content="" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="8" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DI15" Content="" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="10" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DI16" Content="" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="12" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DI17" Content="" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="14" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DI18" Content="" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="16" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label Content="DI1" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DI2" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DI3" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DI4" Grid.Column="0" Grid.Row="7" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DI5" Grid.Column="0" Grid.Row="9" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DI6" Grid.Column="0" Grid.Row="11" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DI7" Grid.Column="0" Grid.Row="13" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DI8" Grid.Column="0" Grid.Row="15" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DI9" Grid.Column="0" Grid.Row="17" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DI10" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DI11" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DI12" Grid.Column="2" Grid.Row="5" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DI13" Grid.Column="2" Grid.Row="7" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DI14" Grid.Column="2" Grid.Row="9" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DI15" Grid.Column="2" Grid.Row="11" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DI16" Grid.Column="2" Grid.Row="13" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DI17" Grid.Column="2" Grid.Row="15" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DI18" Grid.Column="2" Grid.Row="17" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+
+        </Grid>
+        <Grid x:Name="Grid_DO"  Grid.Column="3" Grid.Row="1" Visibility="Visible" ShowGridLines="False" Margin="10,0,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="20*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Ellipse x:Name="lamp_DO1" Grid.Column="1" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="1"/>
+            <Ellipse x:Name="lamp_DO2" Grid.Column="1" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="3"/>
+            <Ellipse x:Name="lamp_DO3" Grid.Column="1" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="5"/>
+            <Ellipse x:Name="lamp_DO4" Grid.Column="1" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="7"/>
+            <Ellipse x:Name="lamp_DO5" Grid.Column="1" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="9"/>
+            <Ellipse x:Name="lamp_DO6" Grid.Column="1" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="11"/>
+            <Ellipse x:Name="lamp_DO7" Grid.Column="1" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="13"/>
+            <Ellipse x:Name="lamp_DO8" Grid.Column="1" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="15"/>
+            <Ellipse x:Name="lamp_DO9" Grid.Column="1" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="17"/>
+            <Ellipse x:Name="lamp_DO10" Grid.Column="3" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="1"/>
+            <Ellipse x:Name="lamp_DO11" Grid.Column="3" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="3"/>
+            <Ellipse x:Name="lamp_DO12" Grid.Column="3" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="5"/>
+            <Ellipse x:Name="lamp_DO13" Grid.Column="3" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="7"/>
+            <Ellipse x:Name="lamp_DO14" Grid.Column="3" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="9"/>
+            <Ellipse x:Name="lamp_DO15" Grid.Column="3" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="11"/>
+            <Ellipse x:Name="lamp_DO16" Grid.Column="3" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="13"/>
+            <Ellipse x:Name="lamp_DO17" Grid.Column="3" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="15"/>
+            <Ellipse x:Name="lamp_DO18" Grid.Column="3" HorizontalAlignment="Center"  Height="15" Width="15" Stroke="Black" VerticalAlignment="Top" Margin="3" Fill="#FFB4AEAD" Grid.Row="17"/>
+            <Label Content="DO1" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DO2" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DO3" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DO4" Grid.Column="0" Grid.Row="7" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DO5" Grid.Column="0" Grid.Row="9" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DO6" Grid.Column="0" Grid.Row="11" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DO7" Grid.Column="0" Grid.Row="13" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DO8" Grid.Column="0" Grid.Row="15" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DO9" Grid.Column="0" Grid.Row="17" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DO10" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DO11" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DO12" Grid.Column="2" Grid.Row="5" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DO13" Grid.Column="2" Grid.Row="7" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DO14" Grid.Column="2" Grid.Row="9" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DO15" Grid.Column="2" Grid.Row="11" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DO16" Grid.Column="2" Grid.Row="13" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DO17" Grid.Column="2" Grid.Row="15" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label Content="DO18" Grid.Column="2" Grid.Row="17" HorizontalAlignment="Right"  VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Padding="0"/>
+            <Label x:Name="descr_DO1" Content="" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DO2" Content="" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DO3" Content="" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DO4" Content="" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="6" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DO5" Content="" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="8" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DO6" Content="" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="10" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DO7" Content="" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="12" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DO8" Content="" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="14" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DO9" Content="" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="16" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DO10" Content="" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="0" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DO11" Content="" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="2" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DO12" Content="" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="4" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DO13" Content="" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="6" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DO14" Content="" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="8" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DO15" Content="" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="10" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DO16" Content="" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="12" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DO17" Content="" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="14" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+            <Label x:Name="descr_DO18" Content="" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="16" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="12" Padding="0" Foreground="Blue"/>
+
+        </Grid>
+        <StatusBar Background="#757575" HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch" Grid.ColumnSpan="4">
+            <TextBlock x:Name="StatBar" Text="fipbjjerijbrijbi" Foreground="White" TextWrapping="NoWrap"/>
+        </StatusBar>
+
+        <Separator  Grid.Row="0" Grid.Column="0"  Grid.ColumnSpan="4"  HorizontalAlignment="Stretch"  VerticalAlignment="Bottom"  Background="#FFF0F0F0" Height="1" Margin="0,0,0,2" />
+        <GridSplitter  Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right"  VerticalAlignment="Stretch" Width="1"/>
+        <GridSplitter  Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"  VerticalAlignment="Stretch" Width="1"/>
+        <GridSplitter  Grid.Row="1" Grid.Column="2" HorizontalAlignment="Right"  VerticalAlignment="Stretch" Width="1"/>
+        <ComboBox x:Name="cmb_UnitModel" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Center" MinWidth="120" MinHeight="10" SelectionChanged="ComboBox_SelectionChanged" Height="21" Margin="10,0,0,0">
+            <TextBlock>Без заголовков</TextBlock>
+            <TextBlock>POOL</TextBlock>
+            <TextBlock>DLE</TextBlock>
+            <TextBlock>ICE (W)</TextBlock>
+            <TextBlock>ICE (E)</TextBlock>
+        </ComboBox>
+
+        <!--<Label  Grid.ColumnSpan="4" Grid.Row="2" Padding="10,0,0,0" VerticalAlignment="Bottom"  Height="20"  VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="10" BorderBrush="{DynamicResource {x:Static SystemColors.WindowFrameBrushKey}}"  HorizontalAlignment="Stretch">
+            <Label.Background>
+                <RadialGradientBrush GradientOrigin="0,0" Center="0,0" RadiusX="0" RadiusY="20" MappingMode="Absolute" SpreadMethod="Repeat">
+                    <GradientStop Color="#FFC1B9B9" Offset="0.28"/>
+                    <GradientStop Color="#FFD7E4F2" Offset="0.643"/>
+                </RadialGradientBrush>
+            </Label.Background>
+        </Label>-->
+    </Grid>
+</Window>
