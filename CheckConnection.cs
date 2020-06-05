@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Modbus.Device;
 
-namespace TestCarel
+namespace UPanel
 {    
     class CheckConnection
     {
